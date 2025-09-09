@@ -15,6 +15,8 @@ import ProfileData from "./pages/ProfileData";
 import EditProfile from "./pages/EditProfile";
 import Chatbot from "./chabot/Chatbot";
 
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -36,7 +38,7 @@ function App() {
         <Route path="/login" element={<Loginn />} />
         <Route path="/register" element={<Register />} />
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} /> 
+          <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contect />} />
@@ -45,7 +47,7 @@ function App() {
             path="/edit-profile"
             element={<EditProfile></EditProfile>}
           ></Route>
-         
+          
         </Route>
       </Routes>
       <Chatbot />

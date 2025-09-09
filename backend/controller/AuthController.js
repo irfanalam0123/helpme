@@ -140,3 +140,19 @@ export const login = async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 };
+
+
+
+// import User from "../models/User.js";
+
+// Get all users except logged-in user
+export const getAllUsersExceptMe = async (req, res) => {
+  try {
+    const users = await User.find({ _id: { $ne: req.user._id } }).select(
+      "-password"
+    );
+    res.json(users);
+  } catch (err) {
+    res.status(500).json({ message: "Server error", error: err.message });
+  }
+};

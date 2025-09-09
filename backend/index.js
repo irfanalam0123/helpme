@@ -21,13 +21,6 @@ app.use(cors());
 app.use("/api/auth", authRoutes);
 app.use("/api/profile", profileRoutes);
 
-
-// app.use(express.static(path.join(__dirname,'/frontend/dist')))
-
-// app.get("*",(req,res) =>{
-//   res.sendFile(path.resolve(__dirname,"frontend","dist","index.html"))
-// })
-
 // Serve frontend
 app.use(express.static(path.join(__dirname, "frontend", "dist")));
 
